@@ -1,0 +1,32 @@
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin font($f-weight, $f-size, $lineHeight, $Color) {
+  font-weight: $f-weight;
+  font-size: $f-size;
+  line-height: $lineHeight;
+  color: $Color;
+}
+
+@mixin headeing($weight, $size, $line, $color, $margin, $padding) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+  color: $color;
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin device($breakpoint) {
+  @if $breakpoint == tablet {
+    @media screen and (max-width: 980px) {
+      @content;
+    }
+  }@else if $breakpoint == mobile {
+    @media screen and (max-width: 500px) {
+      @content;
+    }
+  }
+}

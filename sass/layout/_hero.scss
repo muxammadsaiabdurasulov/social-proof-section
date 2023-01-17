@@ -1,0 +1,162 @@
+.main {
+    background-image: url('../../images/svg/bg-decor-top.svg'), url('../../images/svg/bg-decor-bottom.svg');
+    background-position: left top, bottom right;
+    background-repeat: no-repeat;
+}
+
+.hero {
+    padding: 7rem 0;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(445px, 1fr));
+        grid-gap: 3rem;
+        margin-bottom: 4rem;
+        place-items: center;
+        @include device(tablet) {
+            text-align: center;
+        }
+        @include device(mobile) {
+        grid-template-columns: repeat(auto-fit, minmax(327px, 1fr));
+        }
+    }
+
+    // &__info {
+    //     gap: 1.6rem;
+    // }
+
+    &__heading {
+        width: 445px;
+        font-size: $bigest-size;
+        line-height: $bigest-line-height;
+        color: $primary-color;
+        margin-bottom: 1.6rem;
+        @include device(mobile) {
+            max-width: 330px;
+            margin: 0 auto;
+            font-size: 4rem;
+            line-height: 3.2rem;
+            margin-bottom: 1.7rem;
+        }
+    }
+
+    &__defenition {
+        width: 445px;
+        font-size: $text-bigest-size;
+        font-weight: 500;
+        line-height: $text-bigest-line-height;
+        color: $secondary-color;
+        @include device(mobile) {
+            max-width: 327px;
+        }
+    }
+    &__achivments{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 540px;
+        @include device(mobile) {
+            max-width: 327px;
+        }
+    }
+}
+
+.achivments__wrapper {
+    margin-bottom: 1.6rem;
+    border-radius: 8px;
+    padding: 20px 0 20px 32px;
+    background-color: #f2f2f7;
+    display: flex;
+    gap: 3.2rem;
+    align-items: center;
+    width: 445px;
+    @include device(mobile) {
+        max-width: 327px;
+        gap: 1.5rem  ;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    // &__resons {
+    //     margin-left: 3.2rem;
+    //     font-size: $info-size;
+    //     line-height: $info-line-height;
+    //     color: red;
+    // }
+}
+
+.achivments__resons {
+    
+    font-size: $info-size;
+    line-height: $info-line-height;
+    color: $primary-color;
+}
+
+
+#achivments-2 {
+    align-self: center;
+}
+
+#achivments-3 { 
+    align-self: flex-end;
+}
+
+.card__container{
+    min-height: 360px;
+    margin-top: 71px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    align-items: flex-start;
+    gap: 1.5rem;
+    @include device(mobile) {
+    grid-template-columns: repeat(auto-fit, minmax(327px, 1fr));
+
+    }
+
+    .card{
+        border-radius: 8px;
+        background-color: $primary-color;
+        width: 100%;
+        padding: 4rem 3.2rem;
+    }
+    .card-two{
+        align-self: center;
+    }
+    .card-three{
+        align-self: flex-end;
+    }
+
+    
+    .custumer {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+    }
+
+    .name {
+        margin-left: 26px;
+    }
+
+    .title {
+        color: $primary-white;
+        font-size: $info-size;
+        line-height: $info-line-height;
+        margin-bottom: 4px;
+    }
+
+    .buyer {
+        color: $final-color;
+        font-size: $info-size;
+        font-weight: 400;
+        line-height: $info-line-height;
+    }
+
+    .comment {
+        width: 286px;
+        color: $primary-white;
+        font-size: $info-size;
+        font-weight: 500;
+        line-height: $comment-line-height;
+        letter-spacing: -0.3px;
+    }
+}
